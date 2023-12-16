@@ -1,5 +1,10 @@
+import { UserButton } from '@clerk/nextjs'
+
 export default function InitialPage() {
   return (
-    <p>Only Authenticated users can see this</p> 
+    <div className='flex flex-col gap-y-4'>
+      <h1>Dashboard</h1>
+      <UserButton afterSignOutUrl='/' />
+    </div>
   )
 }
